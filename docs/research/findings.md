@@ -33,5 +33,9 @@ The gap is integration and UX, not DSP.
 ## Out of scope for now (noted)
 Magenta/MusicVAE symbolic generation (Max for Live based), XR/gesture controllers, haptic monitoring (SUBPAC), BCI/EEG, networked remote performance (>40 ms breaks synchronisation).
 
+## Resolved: what Zrythm actually is
+Checked against the upstream repo at `v2.0.0-alpha.6` (2026-10-04): **Zrythm 2 is C++23 with Qt/QML and JUCE**, built with CMake (Conan optional, Qt >= 6.11.1). The "written in C" claim in the FOSS-alternatives report describes Zrythm 1.x (C + GTK4). v2 already has a clip launcher/scenes system and its own CLAP/VST3/LV2 plugin hosting. Licence is AGPL-3.0-or-later **plus** trademark terms: modified builds cannot use the Zrythm name or logo. See `flux-host/flux/docs/UPSTREAM.md`.
+
 ## Open questions
-- Zrythm's implementation language/toolkit differs between sources (C/GTK vs C++/Qt in v2). Verify against the pinned release before choosing host build tooling.
+- Does v2 support Session-to-Arrangement record-through? (Not yet checked.)
+- Alpha stability: v2 is a prerelease line; v1.0.0 (C/GTK4, Nov 2024) is the last stable release.
