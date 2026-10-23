@@ -31,10 +31,13 @@ The gap is integration and UX, not DSP.
 - **Biometric privacy (Saudi PDPL):** the reports argue aggregate-only metadata computed in volatile memory falls outside "personal data". Treat as a hypothesis for counsel: the capture/processing step itself may still be regulated, and a DPIA/DPO may apply at venue scale. Keep any facial recognition (e.g. security systems) fully separate from musical decisions. Prefer mmWave radar or non-identifying density estimation over face-based methods.
 
 ## Out of scope for now (noted)
-Magenta/MusicVAE symbolic generation (Max for Live based), XR/gesture controllers, haptic monitoring (SUBPAC), BCI/EEG, networked remote performance (>40 ms breaks synchronisation).
+XR/gesture controllers, haptic monitoring (SUBPAC), BCI/EEG, networked remote performance (>40 ms breaks synchronisation).
 
 ## Resolved: what Zrythm actually is
 Checked against the upstream repo at `v2.0.0-alpha.6` (2026-10-04): **Zrythm 2 is C++23 with Qt/QML and JUCE**, built with CMake (Conan optional, Qt >= 6.11.1). The "written in C" claim in the FOSS-alternatives report describes Zrythm 1.x (C + GTK4). v2 already has a clip launcher/scenes system and its own CLAP/VST3/LV2 plugin hosting. Licence is AGPL-3.0-or-later **plus** trademark terms: modified builds cannot use the Zrythm name or logo. See `flux-host/flux/docs/UPSTREAM.md`.
+
+## Revised: generation is now in scope
+The original reports parked Magenta/MusicVAE symbolic generation as Max for Live based. That is superseded: agent-driven composition and generation is roadmap phase 8, using local open-weight models (ACE-Step 1.5, Magenta RealTime 2, Anticipatory Music Transformer) and a symbolic-first long-form planner. See `docs/agents/`.
 
 ## Open questions
 - Does v2 support Session-to-Arrangement record-through? (Not yet checked.)
